@@ -9,8 +9,8 @@
    - name: copy artifact
      copy: src=/var/lib/jenkins/workspace/my-vpro/target/vprofile-v1.war dest=/var/lib/jenkins/
    - name: copy dockerfile
-     copy: src=/var/lib/jenkins/workspace/vpro-scripted/Dockerfile dest=/var/lib/jenkins/
+     copy: src=/var/lib/jenkins/workspace/my-vpro/Dockerfile dest=/var/lib/jenkins/
    - name: copy compose file
-     copy: src=/var/lib/jenkins/workspace/vpro-scripted/compose.yaml dest=/var/lib/jenkins/ mode=0777
+     copy: src=/var/lib/jenkins/workspace/my-vpro/compose.yaml dest=/var/lib/jenkins/ mode=0777
    - name: run compose
      shell: docker-compose -f compose.yaml up -d
